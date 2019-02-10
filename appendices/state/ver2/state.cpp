@@ -8,7 +8,7 @@ uint64_t new2old(uint64_t index)
     for(int i = 0; i < 8; i++)
     {
         sample = _pext_u64(index, 0x101 << i);
-        if(sample == 0) // wall as opp
+        if(sample == 0) // wall as regards opp
         {
             result |= 0x100 << i;
         }
