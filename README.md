@@ -55,5 +55,9 @@ Therefore, for each line, there are 2^16 = 65536 possibilities.
 
 Version 1 is for traditional bitboard (no inverse).
 It's used to distinguish the state (L5, L4, D4, L3).
+
 Version 2 is for inverse bitboard.
+With traditional bitboard, when we use the instruction `pext` (Parallel bits extract) to extract the feature, we can't distinguish between **empty** and **out of wall**, so we need extra processing.
+However, they will be different if we use inverse bitboard.
+
 Version 3 and 4 weren't described in our paper. It's just for my personal experimentation.
